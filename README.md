@@ -1,2 +1,5 @@
 # audio-test
-audio test using Alpine.js
+
+audiotest using Alpine.js
+
+![interface](https://raw.githubusercontent.com/gabrieldmonteiro/audio-test/main/assets/screenshot.png)
