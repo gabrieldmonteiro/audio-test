@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">  
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg">  
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+    <div class="container" x-data="{ audios: [
+        document.getElementById('audio-left'),
+        document.getElementById('audio-right'),
+        document.getElementById('audio-both')
+    ] }">
+        <header>
+            <h1>Audio Test</h1>
+            <img src="assets/logo.jpg" alt="Logo" class="logo">
+        </header>
+        <main>
+            <div class="audio-controls">
+                <button @click="audios[0].paused ? audios[0].play() : audios[0].pause()">Left</button>
+                <button @click="audios[1].paused ? audios[1].play() : audios[1].pause()">Right</button>
+                <button @click="audios[2].paused ? audios[2].play() : audios[2].pause()">Both</button>
+            </div>
+        </main>
+        <audio id="audio-left" src="assets/left.mp3"></audio>
+        <audio id="audio-right" src="assets/right.mp3"></audio>
+        <audio id="audio-both" src="assets/both.mp3"></audio>
+        <footer class="footer">            
+            <a href="https://github.com/gabrieldmonteiro" target="_blank">GitHub</a>
+            <span class="separator">|</span>
+            <a href="https://www.linkedin.com/in/gabrieldmonteiro/" target="_blank">LinkedIn</a>
+        </footer>
+    </div>
+</body>
+</html>
